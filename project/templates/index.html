@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Segmentation</title>
+    <style>
+        body {
+            background-image: url("../static/images/background.jpg");
+             background-size: cover; 
+            background-position: center;
+            color: black; /* Changed from 'text' attribute to 'color' */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="login">
+        <center><h1>Customer Segmentation</h1></center>
+        <!-- Main Input For Receiving Query to our ML -->
+        <form action="/predict" method="POST">
+            <h1>Please enter the following details</h1>
+
+            <label for="Sex">Sex:</label>
+            <select id="Sex" name="Sex">
+                <option value="">Select a gender</option>                
+                <option value="1">Male</option>
+                <option value="0">Female</option>
+            </select>&nbsp;&nbsp;<br><br>
+
+            <label for="Marital status">Marital Status:</label>
+            <select id="Marital status" name="Marital status">
+                <option value="">Select an option</option>
+                <option value="0">Single</option>
+                <option value="1">Married</option>
+            </select>&nbsp;&nbsp;<br><br>
+
+            <label>Age:</label>
+            <input type="number" size="30" style="width: 100px; height: 10px;" size="50" min="20" max="80" name="Age" placeholder="Enter your age" required="required"/><br><br>
+
+            <label>Education:</label>
+            <input type="number" size="30" style="width: 100px; height: 10px;" size="50" min="0" max="3" name="Education" placeholder="Select a value" required="required"/><br><br>
+
+            <label>Income:</label>
+            <input type="number" min="5000" name="Income" placeholder="Enter your income" required="required"/><br><br>
+
+            <label for="Occupation">Occupation:</label>
+            <select id="Occupation" name="Occupation">
+                <option value="">Select an occupation</option>
+                <option value="1">Working</option>
+                <option value="2">Business</option>
+                <option value="0">Not Working</option>
+            </select>&nbsp;&nbsp;<br><br>
+
+            <label for="Settlement size">Settlement size:</label>
+            <select id="Settlement size" name="Settlement size">
+                <option value="">Select a size</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>&nbsp;&nbsp;<br><br>
+
+            <button type="submit" class="btn btn-primary btn-block btn-large" style="height:30px;width:200px">Predict</button>
+        </form>
+        <br><br>
+        {{prediction_text}}
+        <br><br>
+        <img src="../static/images/P1.jpg" alt="Submit Form" height="180" width="233" onerror="this.style.display='none'"/>
+        <img src="../static/images/P2.png" alt="Submit Form" height="200" width="300" onerror="this.style.display='none'"/>
+    </div>
+</body>
+</html>
