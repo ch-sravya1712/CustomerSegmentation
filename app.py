@@ -10,8 +10,8 @@ import pandas
 
 from flask import Flask, request, jsonify, render_template
 app = Flask(__name__)
-model =pickle.load(open('adb_model.pkl','rb'))
-scalar=pickle.load(open('scaler.pkl','rb'))
+model =pickle.load(open('ada_boost_model.pkl','rb'))
+scalar=pickle.load(open('minmax.pkl','rb'))
 @app.route('/')
 def home():
     return render_template('index.html') #rendering the home page
