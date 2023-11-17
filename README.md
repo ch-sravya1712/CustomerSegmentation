@@ -35,3 +35,11 @@ This web application classifies the customer as potential customer or highly or 
 1. Enter the required information in the input fields.
 2. Click the "Predict" button.
 3. It shows the type of cutomer in the same page.
+   
+### Inputs
+![image]![input](https://github.com/ch-sravya1712/CustomerSegmentation/assets/94795846/80fca0da-4324-419f-9ce2-798563cbea3b)
+
+### Output
+![output](https://github.com/ch-sravya1712/CustomerSegmentation/assets/94795846/7ddb279c-60e2-47dc-b53d-ba21468dfd3c)
+
+
